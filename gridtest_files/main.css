@@ -1,0 +1,91 @@
+
+.main {
+    display: grid;
+align-items:baseline;
+    grid-template-rows: [menu]/span 20 span 8 [body] ;
+    grid-template-columns:3fr [cnt] 7fr [rgap] 1fr [fend];
+  
+    
+}
+.menu {
+    display: flex;
+    flex-flow: row;
+    margin: 0.6em;
+    background-color: #19a095ff;
+    border-radius: 0.75em 0.25em;
+    padding: 0.4em;
+}
+.pheader {
+    /*! display: flex; */
+    /*! flex-flow: row; */
+    margin: 0.1em;
+    background-color: #3f7890ff;
+    border-radius: 0.75em 0.25em;
+    padding: 0.3em;
+}
+.menu-container {
+    grid-row: 1/span 20;
+    grid-column: 1/fend;
+     background-color: #c0e5e7ff;
+    display: flex;
+    flex-flow: row;
+     padding: 0.3em;
+    border-style: solid;
+    
+}
+.menu-container-inner{
+    
+    top: 20%;
+    bottom: 20%;
+    
+    position: absolute;
+}
+.main-gap{
+    grid-row:20fr/span 8fr;
+    grid-column:span 12;
+}
+.sidebar {
+    grid-column:1/cnt;
+    grid-row-start: 28;
+     background-color: #d4ededff;
+    border-color : #4193c9ff;
+    border-style: solid;
+    display: flex;
+    flex-flow: column;
+}
+
+.cent-container {
+    background-color: #d4ededff;
+    border-color : #4193c9ff;
+    border-style: solid;
+    grid-column:cnt / rgap ;
+    grid-row-start: 28;
+    display: grid;
+    grid-template-rows: repeat( [mn-lb-row] [tbox-row] )  repeat([pbox-row]);
+}
+.tbox-t {
+    grid-column: 1/20;
+    grid-row: tbox-row;
+    background-color: #d4ededff;
+    /*! border-color: #00adeeff; */
+    border: 0.6em solid #00adeeff;
+    
+    
+}
+.tbox-bt {
+    grid-column: 20;
+    grid-row: tbox-row;
+    border: 0.3em solid #00adeeff;
+    background-color: #8cc63f;
+}
+.bt-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.mn-label {
+   grid-row: mn-lb-row;  
+}
+.
+    
+    
