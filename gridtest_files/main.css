@@ -7,11 +7,41 @@ align-items:baseline;
   
     
 }
+img {
+    width: auto;
+    height: 100%
+}
+.upper-box {
+    background-color: #19a095ff;
+}
+.lprogram-bt{
+    background-color: #7fcdeeff;
+}
+.lprogram {
+    background-color: lightgrey;
+    width: 95% ;
+    border: solid black;
+}
+.lmain {
+    display: flex;
+    flex-flow: row;
+}
+.beg-endx {
+    display: grid;
+    grid-template-columns: [beg] 2fr [endx];
+        
+}
+.beg{
+  grid-row: beg;  
+}
+.endx {
+  grid-row: endx;  
+}
 .menu {
     display: flex;
     flex-flow: row;
     margin: 0.6em;
-    background-color: #19a095ff;
+    height: 1.8em;
     border-radius: 0.75em 0.25em;
     padding: 0.4em;
 }
@@ -32,6 +62,9 @@ align-items:baseline;
      padding: 0.3em;
     border-style: solid;
     
+}
+.cent-menu {
+    background-color: #d4ededff;
 }
 .menu-container-inner{
     
@@ -60,11 +93,23 @@ align-items:baseline;
     border-style: solid;
     grid-column:cnt / rgap ;
     grid-row-start: 28;
-    display: grid;
-    grid-template-rows: repeat( [mn-lb-row] [tbox-row] )  repeat([pbox-row]);
+    align-items:stretch;
+
+    display: flex;
+    flex-direction: column;
+    /*! grid-template-rows: 1fr repeat(auto-fill, [mn-lb-row] [tbox-row] )  1fr repeat(auto-fill, 1fr [pbox-row] 1fr); */
+    
 }
+.cent-box-container {
+    display: grid;
+    padding: 0.2em;
+    background-color: #c2f0fbff;
+    grid-template-rows: [mn-lb-row] 1fr [tbox-row];
+    grid-template-columns: 18fr [tbox-col] 1fr [bt] ;
+}
+
 .tbox-t {
-    grid-column: 1/20;
+    grid-column: 1/tbox-col;
     grid-row: tbox-row;
     background-color: #d4ededff;
     /*! border-color: #00adeeff; */
@@ -73,7 +118,7 @@ align-items:baseline;
     
 }
 .tbox-bt {
-    grid-column: 20;
+    grid-column: tbox-col/bt;
     grid-row: tbox-row;
     border: 0.3em solid #00adeeff;
     background-color: #8cc63f;
@@ -86,6 +131,124 @@ align-items:baseline;
 .mn-label {
    grid-row: mn-lb-row;  
 }
-.
+
+.lprogram-dec {
+  display: grid;
+  grid-template-columns: 1fr [handle] 21fr [nend];
+  grid-template-rows: 2fr [uhandle] 144fr [dhandle] 2fr [nend];
+}
+.uhandle {
+  grid-row: 1/uhandle;
+  grid-column: 1/handle;
+  background: lightgreen;
+}
+.dhandle {
+  grid-row: dhandle/nend;
+  grid-column: 1/handle;
+  background: red;
+}
+.prog-scr {
+  grid-row: uhandle/dhandle;
+  grid-column: handle/nend;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.shp-fl {
+  grid-template-rows: 1fr [bts] 1fr [head] 1fr [ebts] 5fr [eshp] 1fr [drl] 1fr [gap] 5fr[arw];
+  grid-template-columns: 2fr [head] 1fr [drl] 3fr [ehead] 6fr [bts] 1fr;
+  display: grid;
+}
+.component {
+  background-color: #92d7e7ff;
+}
+.component {
+}
+.shp-head {
+  grid-row: 1/head;
+  grid-column: head/ehead;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  background-color: gray;
+}
+.shp-cont {
+  grid-row: head/eshp;
+  grid-column: 1/bts;
+}
+.shp-drl {
+  grid-row: eshp/drl;
+  grid-column: drl/drl;
+  background: gray;
+}
+.in-component {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+}
     
+
+.in-area {
+  background: white;
+  border: solid black;
+  margin: 0.5em;
+  width: 70%;
+}
+.in-txt {
+  width: 30%;
+  text-align: center;
+}
+.in-wrap {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+}
+.shp-bts {
+  grid-row: bts/ebts;
+  grid-column: bts;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+}
+.shp-bt {
+  width: 2em;
+  /*! width: 100%; */
+}
+.shp-arw {
+    grid-row: eshp/arw;
+    grid-column: 1/drl;
+    display: inline-block;
+    text-align: center;
+    color: blue;
+}
+.shp-gap {
+    grid-row:drl/arw;
+    grid-column: drl/bts;
+}
+
+
+.cent-strip {
+    background-color:white;
+    margin:0 auto;
+    /*! width: 15%; */
+    height: 100%;
     
+    display: inline-block;
+}
+.cent-arw {
+    background-color:white;
+margin: 0 auto;
+height: 100%;
+display: inline-block;
+    height: 33%;
+    display: block;
+}
+    
+.reg-ar {
+  width: 15%;
+}
+.wide-ar {
+  width: 40%;
+  font-size: 3em;
+}
